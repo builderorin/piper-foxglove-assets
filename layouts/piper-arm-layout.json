@@ -3,13 +3,13 @@
     "3D!piper3d": {
       "cameraState": {
         "perspective": true,
-        "distance": 1.9,
+        "distance": 1.8,
         "phi": 55,
         "thetaOffset": 45,
         "targetOffset": [
           0.2,
           0,
-          0.2
+          0.15
         ],
         "target": [
           0,
@@ -28,7 +28,7 @@
       },
       "followMode": "follow-position",
       "scene": {
-        "backgroundColor": "#0f172a"
+        "backgroundColor": "#1a1a2e"
       },
       "transforms": {
         "labelSize": 0.03,
@@ -44,18 +44,6 @@
         }
       },
       "layers": {
-        "grid": {
-          "visible": true,
-          "frameLocked": true,
-          "label": "Grid",
-          "instanceId": "grid",
-          "layerId": "foxglove.Grid",
-          "divisions": 20,
-          "lineWidth": 1,
-          "color": "#334155",
-          "size": 2,
-          "order": 1
-        },
         "piper-urdf": {
           "visible": true,
           "frameLocked": true,
@@ -64,17 +52,29 @@
           "layerId": "foxglove.Urdf",
           "sourceType": "url",
           "url": "https://raw.githubusercontent.com/builderorin/piper-foxglove-assets/main/urdf/piper-foxglove.urdf",
-          "filePath": "",
-          "parameter": "",
-          "topic": "",
           "framePrefix": "",
           "displayMode": "auto",
-          "fallbackColor": "#cbd5e1",
+          "fallbackColor": "#cccccc",
+          "order": 1
+        },
+        "grid": {
+          "visible": true,
+          "frameLocked": true,
+          "label": "Grid",
+          "instanceId": "grid",
+          "layerId": "foxglove.Grid",
+          "divisions": 20,
+          "lineWidth": 1,
+          "color": "#333355ff",
+          "size": 2,
           "order": 2
         }
       },
       "publish": {
-        "type": "point"
+        "type": "point",
+        "poseTopic": "/move_base_simple/goal",
+        "pointTopic": "/clicked_point",
+        "poseEstimateTopic": "/initialpose"
       },
       "imageMode": {},
       "followTf": "base_link",
@@ -119,7 +119,7 @@
       },
       "synchronize": false
     },
-    "Image!d405rgb": {
+    "Image!wrist": {
       "cameraState": {
         "distance": 20,
         "perspective": true,
@@ -154,46 +154,7 @@
         "type": "point"
       },
       "imageMode": {
-        "imageTopic": "/cameras/d405/rgb"
-      },
-      "synchronize": false
-    },
-    "Image!d405depth": {
-      "cameraState": {
-        "distance": 20,
-        "perspective": true,
-        "phi": 60,
-        "target": [
-          0,
-          0,
-          0
-        ],
-        "targetOffset": [
-          0,
-          0,
-          0
-        ],
-        "targetOrientation": [
-          0,
-          0,
-          0,
-          1
-        ],
-        "thetaOffset": 45,
-        "fovy": 45,
-        "near": 0.5,
-        "far": 5000
-      },
-      "followMode": "follow-pose",
-      "scene": {},
-      "transforms": {},
-      "topics": {},
-      "layers": {},
-      "publish": {
-        "type": "point"
-      },
-      "imageMode": {
-        "imageTopic": "/cameras/d405/depth"
+        "imageTopic": "/cameras/wrist/image"
       },
       "synchronize": false
     },
@@ -328,43 +289,34 @@
       "first": "3D!piper3d",
       "second": {
         "first": "Image!overhead",
-        "second": {
-          "first": "Image!d405rgb",
-          "second": "Image!d405depth",
-          "direction": "row",
-          "splitPercentage": 50
-        },
+        "second": "Image!wrist",
         "direction": "row",
-        "splitPercentage": 34
+        "splitPercentage": 50
       },
       "direction": "column",
       "splitPercentage": 68
     },
     "second": {
       "first": {
-        "first": "Plot!torque1",
-        "second": "Plot!torque2",
-        "direction": "column",
-        "splitPercentage": 50
-      },
-      "second": {
         "first": {
-          "first": "Plot!torque3",
-          "second": "Plot!torque4",
-          "direction": "column",
-          "splitPercentage": 50
+          "first": "Plot!torque1",
+          "second": "Plot!torque2",
+          "direction": "column"
         },
         "second": {
-          "first": "Plot!torque5",
-          "second": "Plot!torque6",
-          "direction": "column",
-          "splitPercentage": 50
+          "first": "Plot!torque3",
+          "second": "Plot!torque4",
+          "direction": "column"
         },
-        "direction": "row",
-        "splitPercentage": 50
+        "direction": "column"
+      },
+      "second": {
+        "first": "Plot!torque5",
+        "second": "Plot!torque6",
+        "direction": "column"
       },
       "direction": "column",
-      "splitPercentage": 34
+      "splitPercentage": 66
     },
     "direction": "row",
     "splitPercentage": 72
