@@ -1,0 +1,312 @@
+{
+  "configById": {
+    "3D!piper3d": {
+      "cameraState": {
+        "perspective": true,
+        "distance": 1.8,
+        "phi": 55,
+        "thetaOffset": 45,
+        "targetOffset": [
+          0.2,
+          0,
+          0.15
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "targetOrientation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "fovy": 45,
+        "near": 0.1,
+        "far": 5000
+      },
+      "followMode": "follow-position",
+      "scene": {
+        "transforms": {
+          "labelSize": 0.03,
+          "editable": false,
+          "showLabel": false,
+          "enablePreloading": true,
+          "lineWidth": 1.5,
+          "axisSize": 0.05
+        },
+        "backgroundColor": "#1a1a2e"
+      },
+      "transforms": {},
+      "topics": {
+        "/joint_states": {
+          "visible": true
+        }
+      },
+      "layers": {
+        "grid": {
+          "visible": true,
+          "frameLocked": true,
+          "label": "Grid",
+          "instanceId": "grid",
+          "layerId": "foxglove.Grid",
+          "divisions": 20,
+          "lineWidth": 1,
+          "color": "#333355ff",
+          "size": 2,
+          "order": 2
+        }
+      },
+      "publish": {
+        "type": "point",
+        "poseTopic": "/move_base_simple/goal",
+        "pointTopic": "/clicked_point",
+        "poseEstimateTopic": "/initialpose"
+      },
+      "imageMode": {},
+      "followTf": "base_link",
+      "synchronize": false
+    },
+    "Image!overhead": {
+      "cameraState": {
+        "distance": 20,
+        "perspective": true,
+        "phi": 60,
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "targetOffset": [
+          0,
+          0,
+          0
+        ],
+        "targetOrientation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "thetaOffset": 45,
+        "fovy": 45,
+        "near": 0.5,
+        "far": 5000
+      },
+      "followMode": "follow-pose",
+      "scene": {},
+      "transforms": {},
+      "topics": {},
+      "layers": {},
+      "publish": {
+        "type": "point"
+      },
+      "imageMode": {
+        "imageTopic": "/cameras/overhead/image"
+      },
+      "synchronize": false
+    },
+    "Image!wrist": {
+      "cameraState": {
+        "distance": 20,
+        "perspective": true,
+        "phi": 60,
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "targetOffset": [
+          0,
+          0,
+          0
+        ],
+        "targetOrientation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "thetaOffset": 45,
+        "fovy": 45,
+        "near": 0.5,
+        "far": 5000
+      },
+      "followMode": "follow-pose",
+      "scene": {},
+      "transforms": {},
+      "topics": {},
+      "layers": {},
+      "publish": {
+        "type": "point"
+      },
+      "imageMode": {
+        "imageTopic": "/cameras/wrist/image"
+      },
+      "synchronize": false
+    },
+    "Plot!torque1": {
+      "paths": [
+        {
+          "timestampMethod": "receiveTime",
+          "value": "/joints/torques.j1",
+          "enabled": true,
+          "color": "#ff6b6b",
+          "lineSize": 2,
+          "label": "J1"
+        }
+      ],
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "showLegend": true,
+      "legendDisplay": "floating",
+      "showPlotValuesInLegend": false,
+      "isSynced": true,
+      "xAxisVal": "timestamp",
+      "sidebarDimension": 240
+    },
+    "Plot!torque2": {
+      "paths": [
+        {
+          "timestampMethod": "receiveTime",
+          "value": "/joints/torques.j2",
+          "enabled": true,
+          "color": "#ffa94d",
+          "lineSize": 2,
+          "label": "J2"
+        }
+      ],
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "showLegend": true,
+      "legendDisplay": "floating",
+      "showPlotValuesInLegend": false,
+      "isSynced": true,
+      "xAxisVal": "timestamp",
+      "sidebarDimension": 240
+    },
+    "Plot!torque3": {
+      "paths": [
+        {
+          "timestampMethod": "receiveTime",
+          "value": "/joints/torques.j3",
+          "enabled": true,
+          "color": "#ffd43b",
+          "lineSize": 2,
+          "label": "J3"
+        }
+      ],
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "showLegend": true,
+      "legendDisplay": "floating",
+      "showPlotValuesInLegend": false,
+      "isSynced": true,
+      "xAxisVal": "timestamp",
+      "sidebarDimension": 240
+    },
+    "Plot!torque4": {
+      "paths": [
+        {
+          "timestampMethod": "receiveTime",
+          "value": "/joints/torques.j4",
+          "enabled": true,
+          "color": "#69db7c",
+          "lineSize": 2,
+          "label": "J4"
+        }
+      ],
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "showLegend": true,
+      "legendDisplay": "floating",
+      "showPlotValuesInLegend": false,
+      "isSynced": true,
+      "xAxisVal": "timestamp",
+      "sidebarDimension": 240
+    },
+    "Plot!torque5": {
+      "paths": [
+        {
+          "timestampMethod": "receiveTime",
+          "value": "/joints/torques.j5",
+          "enabled": true,
+          "color": "#4dabf7",
+          "lineSize": 2,
+          "label": "J5"
+        }
+      ],
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "showLegend": true,
+      "legendDisplay": "floating",
+      "showPlotValuesInLegend": false,
+      "isSynced": true,
+      "xAxisVal": "timestamp",
+      "sidebarDimension": 240
+    },
+    "Plot!torque6": {
+      "paths": [
+        {
+          "timestampMethod": "receiveTime",
+          "value": "/joints/torques.j6",
+          "enabled": true,
+          "color": "#da77f2",
+          "lineSize": 2,
+          "label": "J6"
+        }
+      ],
+      "showXAxisLabels": true,
+      "showYAxisLabels": true,
+      "showLegend": true,
+      "legendDisplay": "floating",
+      "showPlotValuesInLegend": false,
+      "isSynced": true,
+      "xAxisVal": "timestamp",
+      "sidebarDimension": 240
+    }
+  },
+  "globalVariables": {},
+  "userNodes": {},
+  "playbackConfig": {
+    "speed": 1
+  },
+  "layout": {
+    "first": {
+      "first": "3D!piper3d",
+      "second": {
+        "first": "Image!overhead",
+        "second": "Image!wrist",
+        "direction": "row",
+        "splitPercentage": 50
+      },
+      "direction": "column",
+      "splitPercentage": 68
+    },
+    "second": {
+      "first": {
+        "first": {
+          "first": "Plot!torque1",
+          "second": "Plot!torque2",
+          "direction": "column"
+        },
+        "second": {
+          "first": "Plot!torque3",
+          "second": "Plot!torque4",
+          "direction": "column"
+        },
+        "direction": "column"
+      },
+      "second": {
+        "first": "Plot!torque5",
+        "second": "Plot!torque6",
+        "direction": "column"
+      },
+      "direction": "column",
+      "splitPercentage": 66
+    },
+    "direction": "row",
+    "splitPercentage": 72
+  }
+}
