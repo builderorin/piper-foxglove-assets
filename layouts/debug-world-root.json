@@ -1,0 +1,85 @@
+{
+  "configById": {
+    "3D!piper-debug-world": {
+      "cameraState": {
+        "perspective": true,
+        "distance": 1.8,
+        "phi": 55,
+        "thetaOffset": 45,
+        "targetOffset": [
+          0,
+          0,
+          0.18
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "targetOrientation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "fovy": 45,
+        "near": 0.1,
+        "far": 5000
+      },
+      "scene": {
+        "backgroundColor": "#0f1220"
+      },
+      "transforms": {
+        "showLabel": true,
+        "editable": false,
+        "enablePreloading": true,
+        "lineWidth": 2,
+        "axisSize": 0.08,
+        "labelSize": 0.04
+      },
+      "topics": {
+        "/joint_states": {
+          "visible": true
+        }
+      },
+      "layers": {
+        "piper-urdf": {
+          "visible": true,
+          "frameLocked": true,
+          "label": "Piper URDF",
+          "instanceId": "piper-urdf",
+          "layerId": "foxglove.Urdf",
+          "sourceType": "url",
+          "url": "https://raw.githubusercontent.com/builderorin/piper-foxglove-assets/main/urdf/piper-foxglove.urdf",
+          "framePrefix": "",
+          "displayMode": "auto",
+          "fallbackColor": "#cccccc",
+          "order": 1
+        },
+        "grid": {
+          "visible": true,
+          "frameLocked": true,
+          "label": "Grid",
+          "instanceId": "grid",
+          "layerId": "foxglove.Grid",
+          "divisions": 20,
+          "lineWidth": 1,
+          "color": "#2b3150aa",
+          "size": 2,
+          "order": 2
+        }
+      },
+      "publish": {
+        "type": "point"
+      },
+      "imageMode": {},
+      "synchronize": false
+    }
+  },
+  "globalVariables": [],
+  "userNodes": [],
+  "playbackConfig": {
+    "speed": 1
+  },
+  "layout": "3D!piper-debug-world"
+}
