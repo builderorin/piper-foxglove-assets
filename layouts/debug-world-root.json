@@ -3,13 +3,13 @@
     "3D!piper-debug-world": {
       "cameraState": {
         "perspective": true,
-        "distance": 1.9944598337941641,
-        "phi": 60.719363747956336,
-        "thetaOffset": 0.706577332243623,
+        "distance": 0.8339242142871283,
+        "phi": 91.5694046644865,
+        "thetaOffset": -2.6882160392785335,
         "targetOffset": [
-          0.09208430132267456,
-          0.46005838374625185,
-          0.17999999999999974
+          -0.050878185942299266,
+          0.0019828417610941486,
+          0.17999999999999963
         ],
         "target": [
           0,
@@ -36,7 +36,8 @@
           "axisSize": 0,
           "editable": false,
           "lineWidth": 0
-        }
+        },
+        "enableStats": false
       },
       "transforms": {
         "showLabel": true,
@@ -108,7 +109,7 @@
           "controlMode": "transforms",
           "jointStatesTopic": "/joint_states",
           "showAxis": false,
-          "showOutlines": false
+          "showOutlines": true
         },
         "grid": {
           "visible": true,
