@@ -1,0 +1,150 @@
+{
+  "configById": {
+    "3D!piper-debug-world": {
+      "cameraState": {
+        "perspective": true,
+        "distance": 0.8339242142871283,
+        "phi": 91.5694046644865,
+        "thetaOffset": -2.6882160392785335,
+        "targetOffset": [
+          -0.050878185942299266,
+          0.0019828417610941486,
+          0.17999999999999963
+        ],
+        "target": [
+          0,
+          0,
+          0
+        ],
+        "targetOrientation": [
+          0,
+          0,
+          0,
+          1
+        ],
+        "fovy": 45,
+        "near": 0.1,
+        "far": 5000
+      },
+      "scene": {
+        "backgroundColor": "#0f1220",
+        "meshUpAxis": "z_up",
+        "transforms": {
+          "showLabel": false,
+          "enablePreloading": true,
+          "visible": true,
+          "axisSize": 0,
+          "editable": false,
+          "lineWidth": 0
+        },
+        "enableStats": false
+      },
+      "transforms": {
+        "showLabel": true,
+        "editable": false,
+        "enablePreloading": true,
+        "lineWidth": 2,
+        "axisSize": 0.08,
+        "labelSize": 0.04,
+        "frame:world": {
+          "visible": true
+        },
+        "frame:base_link": {
+          "visible": true
+        },
+        "frame:link1": {
+          "visible": true
+        },
+        "frame:link2": {
+          "visible": true
+        },
+        "frame:link3": {
+          "visible": true
+        },
+        "frame:link4": {
+          "visible": true
+        },
+        "frame:link5": {
+          "visible": true
+        },
+        "frame:link6": {
+          "visible": true
+        },
+        "frame:gripper_base": {
+          "visible": true
+        },
+        "frame:grasp_frame": {
+          "visible": true
+        },
+        "frame:link7": {
+          "visible": true
+        },
+        "frame:link8": {
+          "visible": true
+        }
+      },
+      "topics": {
+        "/joint_states": {
+          "visible": true
+        }
+      },
+      "layers": {
+        "piper-urdf": {
+          "visible": true,
+          "frameLocked": true,
+          "label": "Piper URDF",
+          "instanceId": "piper-urdf",
+          "layerId": "foxglove.Urdf",
+          "sourceType": "url",
+          "url": "https://raw.githubusercontent.com/builderorin/piper-foxglove-assets/main/urdf/piper-foxglove.urdf",
+          "framePrefix": "",
+          "displayMode": "visual",
+          "fallbackColor": "#cccccc",
+          "order": 1,
+          "links": {
+            "base_link": {
+              "visible": true
+            }
+          },
+          "controlMode": "transforms",
+          "jointStatesTopic": "/joint_states",
+          "showAxis": false,
+          "showOutlines": true
+        },
+        "grid": {
+          "visible": true,
+          "frameLocked": true,
+          "label": "Grid",
+          "instanceId": "grid",
+          "layerId": "foxglove.Grid",
+          "divisions": 20,
+          "lineWidth": 1,
+          "color": "#2b3150aa",
+          "size": 2,
+          "order": 2
+        }
+      },
+      "publish": {
+        "type": "point",
+        "poseTopic": "/move_base_simple/goal",
+        "pointTopic": "/clicked_point",
+        "poseEstimateTopic": "/initialpose",
+        "poseEstimateXDeviation": 0.5,
+        "poseEstimateYDeviation": 0.5,
+        "poseEstimateThetaDeviation": 0.26179939
+      },
+      "imageMode": {},
+      "synchronize": false,
+      "followMode": "follow-none",
+      "followTf": "world",
+      "fixedFrame": "world",
+      "foxglovePanelTitle": "3D Replay"
+    }
+  },
+  "globalVariables": [],
+  "userNodes": [],
+  "playbackConfig": {
+    "speed": 1
+  },
+  "layout": "3D!piper-debug-world"
+}
