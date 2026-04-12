@@ -2,19 +2,18 @@
   "configById": {
     "3D!piper-debug-world": {
       "cameraState": {
+        "distance": 0.752616603394319,
         "perspective": true,
-        "distance": 1.8,
-        "phi": 55,
-        "thetaOffset": 45,
-        "targetOffset": [
-          0,
-          0,
-          0.18
-        ],
+        "phi": 60.71936374795585,
         "target": [
           0,
           0,
           0
+        ],
+        "targetOffset": [
+          -0.042320733424260265,
+          -0.009849190955683382,
+          0.1799999999999997
         ],
         "targetOrientation": [
           0,
@@ -22,12 +21,14 @@
           0,
           1
         ],
+        "thetaOffset": 0.7065773322436071,
         "fovy": 45,
         "near": 0.1,
         "far": 5000
       },
       "scene": {
-        "backgroundColor": "#0f1220"
+        "backgroundColor": "#0f1220",
+        "meshUpAxis": "z_up"
       },
       "transforms": {
         "showLabel": true,
@@ -52,9 +53,16 @@
           "sourceType": "url",
           "url": "https://raw.githubusercontent.com/builderorin/piper-foxglove-assets/main/urdf/piper-foxglove.urdf",
           "framePrefix": "",
-          "displayMode": "auto",
+          "displayMode": "visual",
           "fallbackColor": "#cccccc",
-          "order": 1
+          "order": 1,
+          "links": {
+            "base_link": {
+              "visible": true
+            }
+          },
+          "controlMode": "transforms",
+          "jointStatesTopic": "/joint_states"
         },
         "grid": {
           "visible": true,
@@ -70,10 +78,19 @@
         }
       },
       "publish": {
-        "type": "point"
+        "type": "point",
+        "poseTopic": "/move_base_simple/goal",
+        "pointTopic": "/clicked_point",
+        "poseEstimateTopic": "/initialpose",
+        "poseEstimateXDeviation": 0.5,
+        "poseEstimateYDeviation": 0.5,
+        "poseEstimateThetaDeviation": 0.26179939
       },
       "imageMode": {},
-      "synchronize": false
+      "synchronize": false,
+      "followMode": "follow-none",
+      "followTf": "world",
+      "fixedFrame": "world"
     }
   },
   "globalVariables": [],
