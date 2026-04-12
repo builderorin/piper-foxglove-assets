@@ -2,18 +2,19 @@
   "configById": {
     "3D!piper-debug-world": {
       "cameraState": {
-        "distance": 0.752616603394319,
         "perspective": true,
-        "phi": 60.71936374795585,
+        "distance": 1.9944598337941641,
+        "phi": 60.719363747956336,
+        "thetaOffset": 0.706577332243623,
+        "targetOffset": [
+          0.09208430132267456,
+          0.46005838374625185,
+          0.17999999999999974
+        ],
         "target": [
           0,
           0,
           0
-        ],
-        "targetOffset": [
-          -0.042320733424260265,
-          -0.009849190955683382,
-          0.1799999999999997
         ],
         "targetOrientation": [
           0,
@@ -21,14 +22,18 @@
           0,
           1
         ],
-        "thetaOffset": 0.7065773322436071,
         "fovy": 45,
         "near": 0.1,
         "far": 5000
       },
       "scene": {
         "backgroundColor": "#0f1220",
-        "meshUpAxis": "z_up"
+        "meshUpAxis": "z_up",
+        "transforms": {
+          "showLabel": false,
+          "enablePreloading": true,
+          "visible": true
+        }
       },
       "transforms": {
         "showLabel": true,
@@ -36,7 +41,43 @@
         "enablePreloading": true,
         "lineWidth": 2,
         "axisSize": 0.08,
-        "labelSize": 0.04
+        "labelSize": 0.04,
+        "frame:world": {
+          "visible": true
+        },
+        "frame:base_link": {
+          "visible": true
+        },
+        "frame:link1": {
+          "visible": true
+        },
+        "frame:link2": {
+          "visible": true
+        },
+        "frame:link3": {
+          "visible": true
+        },
+        "frame:link4": {
+          "visible": true
+        },
+        "frame:link5": {
+          "visible": true
+        },
+        "frame:link6": {
+          "visible": true
+        },
+        "frame:gripper_base": {
+          "visible": true
+        },
+        "frame:grasp_frame": {
+          "visible": true
+        },
+        "frame:link7": {
+          "visible": true
+        },
+        "frame:link8": {
+          "visible": true
+        }
       },
       "topics": {
         "/joint_states": {
@@ -62,7 +103,9 @@
             }
           },
           "controlMode": "transforms",
-          "jointStatesTopic": "/joint_states"
+          "jointStatesTopic": "/joint_states",
+          "showAxis": false,
+          "showOutlines": false
         },
         "grid": {
           "visible": true,
@@ -90,7 +133,8 @@
       "synchronize": false,
       "followMode": "follow-none",
       "followTf": "world",
-      "fixedFrame": "world"
+      "fixedFrame": "world",
+      "foxglovePanelTitle": "3D Replay"
     }
   },
   "globalVariables": [],
