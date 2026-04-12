@@ -32,7 +32,10 @@
         "transforms": {
           "showLabel": false,
           "enablePreloading": true,
-          "visible": true
+          "visible": true,
+          "axisSize": 0,
+          "editable": false,
+          "lineWidth": 0
         }
       },
       "transforms": {
